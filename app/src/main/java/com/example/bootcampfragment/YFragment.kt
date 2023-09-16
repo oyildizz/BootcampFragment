@@ -18,19 +18,6 @@ class YFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding =FragmentYBinding.inflate( inflater, container, false)
-//        val customBackPressedCallback = object : OnBackPressedCallback(true) {
-//            override fun handleOnBackPressed() {
-//                        isEnabled = false // Geri tuşunun varsayılan davranışını engeller
-//                        val fragmentManager = requireActivity().supportFragmentManager
-//                        val targetFragment = AnasayfaFragment() // Hedef Fragment'ın örneğini oluşturun
-//                        val transaction = fragmentManager.beginTransaction()
-//                        transaction.replace(R.id.fragmentContainerView, targetFragment) // Hedef Fragment'ı yerine koyun
-//                        transaction.addToBackStack(null) // Geri tuşu ile geri dönülebilmesi için işlemi geri alınabilir kılın
-//                        transaction.commit() // İşlemi uygula
-//            }
-//        }
-//        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, customBackPressedCallback)
-        // Inflate the layout for this fragment
         return binding.root
     }
 
