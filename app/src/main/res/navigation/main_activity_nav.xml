@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav.xml"
+    app:startDestination="@id/anasayfaFragment2">
+
+    <fragment
+        android:id="@+id/AFragment2"
+        android:name="com.example.bootcampfragment.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/action_AFragment2_to_BFragment2"
+            app:destination="@id/BFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/anasayfaFragment2"
+        android:name="com.example.bootcampfragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/action_anasayfaFragment2_to_AFragment2"
+            app:destination="@id/AFragment2" />
+        <action
+            android:id="@+id/action_anasayfaFragment2_to_XFragment2"
+            app:destination="@id/XFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/XFragment2"
+        android:name="com.example.bootcampfragment.XFragment"
+        android:label="fragment_x"
+        tools:layout="@layout/fragment_x" >
+        <action
+            android:id="@+id/action_XFragment2_to_YFragment2"
+            app:destination="@id/YFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/YFragment2"
+        android:name="com.example.bootcampfragment.YFragment"
+        android:label="fragment_y"
+        tools:layout="@layout/fragment_y" >
+        <action
+            android:id="@+id/action_YFragment2_to_anasayfaFragment2"
+            app:destination="@id/anasayfaFragment2"
+            app:popUpTo="@id/XFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/BFragment2"
+        android:name="com.example.bootcampfragment.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_BFragment2_to_YFragment2"
+            app:destination="@id/YFragment2" />
+    </fragment>
+</navigation>
